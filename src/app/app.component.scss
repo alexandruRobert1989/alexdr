@@ -1,0 +1,11 @@
+/* app.component.css */
+
+.app-background {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the wrapper takes full viewport height */
+}
+
+.content {
+  flex: 1; /* Allows the content to take available space */
+}
