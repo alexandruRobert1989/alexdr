@@ -11,6 +11,9 @@
   --navbar-footer-link-hover-color: #ffffff; /* White on hover */
   --primary-color: #007acc; /* Matches link color */
   --standalone-link-color: #007acc; /* Standalone links color in light mode */
+  --translate-bg-color: #ffffff; /* Background color for translate dropdown in light mode */
+  --translate-text-color: #2c3e50; /* Text color for translate dropdown in light mode */
+  --translate-border-color: #d1d5db; /* Border color for translate dropdown in light mode */
 }
 
 /* Dark Theme */
@@ -22,6 +25,9 @@ html.dark-theme {
   --footer-link-hover-color: #8e44ad; /* Slightly darker purple for hover */
   --primary-color: #a29bfe; /* Matches link color */
   --standalone-link-color: #d1d5db; /* Soft white for standalone links */
+  --translate-bg-color: #2a2d35; /* Background color for translate dropdown in dark mode */
+  --translate-text-color: #d1d5db; /* Text color for translate dropdown in dark mode */
+  --translate-border-color: #444444; /* Border color for translate dropdown in dark mode */
 }
 
 /* Applying colors across the app */
@@ -60,13 +66,11 @@ html, body, .app-background {
 }
 
 /* Styling for standalone links outside of navbar and footer */
-/* Light Mode - Normal styling */
 a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
   color: var(--standalone-link-color);
   transition: color 0.3s ease;
 }
 
-/* Dark Mode - Underline and italic styling */
 html.dark-theme a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
   color: var(--standalone-link-color);
   text-decoration: underline;
@@ -89,4 +93,29 @@ html.dark-theme a:not(.navbar-link):not(.footer-link):hover {
 .btn-primary:hover {
   background-color: var(--navbar-footer-link-hover-color);
   border-color: var(--navbar-footer-link-hover-color);
+}
+
+
+/* Styling for Google Translate widget */
+#google_translate_element {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+/* Style the Google Translate dropdown */
+.goog-te-combo {
+  background-color: var(--translate-bg-color) !important;
+  color: var(--translate-text-color) !important;
+  border: 1px solid var(--translate-border-color) !important;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Optionally hide the Google Translate icon */
+.goog-te-gadget-icon {
+  display: none;
 }

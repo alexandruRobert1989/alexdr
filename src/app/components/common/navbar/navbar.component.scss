@@ -1,3 +1,4 @@
+/* Styles for Theme Toggle Button */
 .theme-toggle-btn {
   background: none;
   border: none;
@@ -12,19 +13,40 @@
 
   /* Zoom effect on the icon */
   i {
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease;
   }
 
   i:hover {
-    transform: scale(1.15); /* Zoom in on hover */
+    transform: scale(1.15);
   }
 }
 
-.fa-moon{
-  color:darkgray;
+.fa-moon {
+  color: darkgray;
 }
 
 /* Specific color for sun icon */
 .sun-icon {
   color: #FFD700; /* Yellow color for sun icon */
 }
+
+/* Google Translate widget alignment */
+#google_translate_element {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+
+/* Optional: Adjust the font size of the translation dropdown */
+.goog-te-combo {
+  font-size: 0.9rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+
+
+
+
