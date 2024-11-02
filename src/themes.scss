@@ -2,15 +2,15 @@
 
 /* Light Theme */
 :root {
-  --bg-color: #e0eaf5; /* Slightly lighter than the footer, subtle contrast */
+  --bg-color: #e0eaf5; /* Light blue-gray background for the body */
   --text-color: #2c3e50; /* Dark blue-gray for readability */
-  --header-footer-bg: #d0e2ff; /* Soft blue for navbar/footer, more vivid */
-  --footer-text-color: #2c3e50; /* Same as main text color */
-  --footer-link-color: #007acc; /* Bright blue for links */
-  --footer-link-hover-color: #005a99; /* Slightly darker blue on hover */
+  --header-footer-bg: #007bff; /* Bright blue background for navbar/footer */
+  --navbar-footer-text-color: #ffffff; /* White for site name */
+  --navbar-footer-active-link-color: #ffffff; /* Brighter white for selected link */
+  --navbar-footer-link-color: #d1d5db; /* Light gray for non-selected links */
+  --navbar-footer-link-hover-color: #ffffff; /* White on hover */
   --primary-color: #007acc; /* Matches link color */
   --standalone-link-color: #007acc; /* Standalone links color in light mode */
-  --footer-copyright-bg-color: #b3d1ff; /* Slightly darker blue for copyright */
 }
 
 /* Dark Theme */
@@ -18,12 +18,10 @@ html.dark-theme {
   --bg-color: #20232a; /* Dark gray, slightly muted */
   --text-color: #d1d5db; /* Soft white for readability */
   --header-footer-bg: #2a2d35; /* Darker gray for header/footer */
-  --footer-text-color: var(--text-color); /* Matches general text color */
   --footer-link-color: #a29bfe; /* Soft purple for links */
   --footer-link-hover-color: #8e44ad; /* Slightly darker purple for hover */
   --primary-color: #a29bfe; /* Matches link color */
   --standalone-link-color: #d1d5db; /* Soft white for standalone links */
-  --footer-copyright-bg-color: #1f1f1f; /* Very dark gray background */
 }
 
 /* Applying colors across the app */
@@ -39,25 +37,26 @@ html, body, .app-background {
   background-color: var(--header-footer-bg) !important;
 }
 
-/* Specific Background for Copyright Section */
-.footer-copyright-bg {
-  background-color: var(--footer-copyright-bg-color);
-}
-
 .navbar-text,
 .footer-text {
-  color: var(--footer-text-color) !important;
+  color: var(--navbar-footer-text-color) !important;
 }
 
 .navbar-link,
 .footer-link {
-  color: var(--footer-link-color) !important;
+  color: var(--navbar-footer-link-color) !important;
   text-decoration: none;
 }
 
 .navbar-link:hover,
 .footer-link:hover {
-  color: var(--footer-link-hover-color) !important;
+  color: var(--navbar-footer-link-hover-color) !important;
+}
+
+/* Active Link Styling */
+.navbar-link.active,
+.footer-link.active {
+  color: var(--navbar-footer-active-link-color) !important; /* Pure white for active link */
 }
 
 /* Styling for standalone links outside of navbar and footer */
@@ -88,6 +87,6 @@ html.dark-theme a:not(.navbar-link):not(.footer-link):hover {
 }
 
 .btn-primary:hover {
-  background-color: var(--footer-link-hover-color);
-  border-color: var(--footer-link-hover-color);
+  background-color: var(--navbar-footer-link-hover-color);
+  border-color: var(--navbar-footer-link-hover-color);
 }
