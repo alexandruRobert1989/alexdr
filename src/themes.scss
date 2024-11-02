@@ -2,30 +2,28 @@
 
 /* Light Theme */
 :root {
-  --bg-color: #f5f5f5;
-  --text-color: #333333;
-  --header-footer-bg: #f0f0f0;
-  --footer-text-color: #333333;
-  --footer-link-color: #0d6efd;
-  --footer-link-hover-color: #0056b3;
-  --primary-color: #0d6efd;
-  --standalone-link-color: #0d6efd; /* Color for standalone links in light mode */
-  --footer-copyright-bg-color: #e0e0e0; /* Custom color for copyright section in light mode */
+  --bg-color: #e0eaf5; /* Slightly lighter than the footer, subtle contrast */
+  --text-color: #2c3e50; /* Dark blue-gray for readability */
+  --header-footer-bg: #d0e2ff; /* Soft blue for navbar/footer, more vivid */
+  --footer-text-color: #2c3e50; /* Same as main text color */
+  --footer-link-color: #007acc; /* Bright blue for links */
+  --footer-link-hover-color: #005a99; /* Slightly darker blue on hover */
+  --primary-color: #007acc; /* Matches link color */
+  --standalone-link-color: #007acc; /* Standalone links color in light mode */
+  --footer-copyright-bg-color: #b3d1ff; /* Slightly darker blue for copyright */
 }
 
 /* Dark Theme */
 html.dark-theme {
-  --bg-color: #181a1b;
-  --text-color: #e0e0e0;
-  --header-footer-bg: #333333;
-  --footer-text-color: var(--text-color);
-  --footer-link-color: var(--text-color);
-  --footer-link-hover-color: #9b6ec4;
-  --primary-color: #bb86fc;
-  --standalone-link-color: var(--text-color); /* Color for standalone links in dark mode */
-  --footer-copyright-bg-color: #444444; /* Custom color for copyright section in dark mode */
-
-
+  --bg-color: #20232a; /* Dark gray, slightly muted */
+  --text-color: #d1d5db; /* Soft white for readability */
+  --header-footer-bg: #2a2d35; /* Darker gray for header/footer */
+  --footer-text-color: var(--text-color); /* Matches general text color */
+  --footer-link-color: #a29bfe; /* Soft purple for links */
+  --footer-link-hover-color: #8e44ad; /* Slightly darker purple for hover */
+  --primary-color: #a29bfe; /* Matches link color */
+  --standalone-link-color: #d1d5db; /* Soft white for standalone links */
+  --footer-copyright-bg-color: #1f1f1f; /* Very dark gray background */
 }
 
 /* Applying colors across the app */
@@ -72,12 +70,12 @@ a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
 /* Dark Mode - Underline and italic styling */
 html.dark-theme a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
   color: var(--standalone-link-color);
-  //text-decoration: underline;
+  text-decoration: underline;
   font-style: italic;
 }
 
 html.dark-theme a:not(.navbar-link):not(.footer-link):hover {
-  color: var(--footer-link-hover-color); /* Subtle hover effect in dark mode */
+  color: var(--footer-link-hover-color);
   text-decoration: underline;
   font-style: italic;
 }
@@ -90,6 +88,6 @@ html.dark-theme a:not(.navbar-link):not(.footer-link):hover {
 }
 
 .btn-primary:hover {
-  background-color: var(--link-hover-color);
-  border-color: var(--link-hover-color);
+  background-color: var(--footer-link-hover-color);
+  border-color: var(--footer-link-hover-color);
 }
