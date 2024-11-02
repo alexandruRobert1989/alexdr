@@ -10,6 +10,7 @@
   --footer-link-hover-color: #0056b3;
   --primary-color: #0d6efd;
   --standalone-link-color: #0d6efd; /* Color for standalone links in light mode */
+  --footer-copyright-bg-color: #e0e0e0; /* Custom color for copyright section in light mode */
 }
 
 /* Dark Theme */
@@ -17,11 +18,14 @@ html.dark-theme {
   --bg-color: #181a1b;
   --text-color: #e0e0e0;
   --header-footer-bg: #333333;
-  --footer-text-color: #e0e0e0;
-  --footer-link-color: #e0e0e0;
+  --footer-text-color: var(--text-color);
+  --footer-link-color: var(--text-color);
   --footer-link-hover-color: #9b6ec4;
   --primary-color: #bb86fc;
-  --standalone-link-color: #bb86fc; /* Color for standalone links in dark mode */
+  --standalone-link-color: var(--text-color); /* Color for standalone links in dark mode */
+  --footer-copyright-bg-color: #444444; /* Custom color for copyright section in dark mode */
+
+
 }
 
 /* Applying colors across the app */
@@ -35,6 +39,11 @@ html, body, .app-background {
 .navbar-bg,
 .footer-bg {
   background-color: var(--header-footer-bg) !important;
+}
+
+/* Specific Background for Copyright Section */
+.footer-copyright-bg {
+  background-color: var(--footer-copyright-bg-color);
 }
 
 .navbar-text,
@@ -54,11 +63,17 @@ html, body, .app-background {
 }
 
 /* Styling for standalone links outside of navbar and footer */
-a:not(.navbar-link):not(.footer-link) {
+/* Light Mode - Normal styling */
+a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
   color: var(--standalone-link-color);
-  text-decoration: underline;
-  font-style: italic;
   transition: color 0.3s ease;
+}
+
+/* Dark Mode - Underline and italic styling */
+html.dark-theme a:not(.navbar-link):not(.footer-link):not(.navbar-brand) {
+  color: var(--standalone-link-color);
+  //text-decoration: underline;
+  font-style: italic;
 }
 
 html.dark-theme a:not(.navbar-link):not(.footer-link):hover {
