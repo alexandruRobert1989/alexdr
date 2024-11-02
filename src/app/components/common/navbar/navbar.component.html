@@ -18,9 +18,13 @@
         <li class="nav-item">
           <a class="nav-link navbar-link" href="#">Contact</a>
         </li>
+        <!-- Theme Toggle Icon Button -->
         <li class="nav-item">
-          <button class="btn btn-secondary" id="theme-toggle-btn" (click)="toggleTheme()">Toggle Theme</button>
+          <button class="btn theme-toggle-btn" (click)="toggleTheme()">
+            <i [ngClass]="isDarkTheme ? 'fas fa-sun sun-icon' : 'fas fa-moon'"></i>
+          </button>
         </li>
+
       </ul>
     </div>
   </div>
