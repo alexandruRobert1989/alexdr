@@ -8,8 +8,25 @@
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+/coverage
+/junit.xml
+/karma-results/
+
+# Firebase
+.firebase/
+.firebase/*.cache
+.firebaserc
+
+# Angular cache
+/.angular/cache
+
+# Logs
+*.log
 
 # IDEs and editors
 .idea/
@@ -26,20 +43,26 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+
+# SASS and TypeScript caches
+.sass-cache/
+/.typings/
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
 /connect.lock
-/coverage
 /libpeerconnection.log
 testem.log
-/typings
+.history/
 
 # System files
 .DS_Store
 Thumbs.db
+*.swp
 
-#Firebase
-.firebase/
+# macOS files
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+.S_*
