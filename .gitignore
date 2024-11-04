@@ -21,6 +21,8 @@ pnpm-debug.log*
 .firebase/
 .firebase/*.cache
 .firebaserc
+firebase.json
+firebase-debug.log
 
 # Angular cache
 /.angular/cache
