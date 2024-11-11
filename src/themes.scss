@@ -44,12 +44,13 @@ html, body, .app-background {
 }
 
 .navbar-text,
-.footer-text {
+.footer-text{
   color: var(--navbar-footer-text-color) !important;
 }
 
 .navbar-link,
-.footer-link {
+.footer-link,
+.custom-navbar-toggler-icon {
   color: var(--navbar-footer-link-color) !important;
   text-decoration: none;
 }
