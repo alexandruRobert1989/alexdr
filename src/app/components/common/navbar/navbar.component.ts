@@ -2,13 +2,12 @@ import { Component, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angula
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [
-    NgClass
-  ],
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+    selector: 'app-navbar',
+    imports: [
+        NgClass
+    ],
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
 

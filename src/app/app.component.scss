@@ -12,3 +12,21 @@
 }
 
 
+.lottie-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum size of the animation */
+  margin: 0 auto;
+
+  /* Responsive height based on the aspect ratio */
+  aspect-ratio: 1; /* Adjust if your animation has a specific ratio */
+}
+
+@media (max-width: 768px) {
+  .lottie-animation {
+    max-width: 300px;
+  }
+}
+
