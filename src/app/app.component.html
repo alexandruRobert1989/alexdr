@@ -3,9 +3,9 @@
   <!-- Google Translate widget placeholder -->
   <div class="content">
     <!-- Lottie Animation -->
-    <div class="lottie-animation">
-      <ng-lottie [options]="lottieOptions" (animationCreated)="onAnimationCreated($event)"></ng-lottie>
-    </div>
+
+    <custom-lottie [options]="lottieOptions"></custom-lottie>
+
     <router-outlet></router-outlet>
     <div class="test-links">
       <p>Check out these links to test standalone link styling:</p>

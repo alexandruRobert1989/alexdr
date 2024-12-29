@@ -1,0 +1,17 @@
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Default aspect ratio to maintain proper scaling */
+  aspect-ratio: 1;
+
+  /* Ensure responsiveness */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+}
