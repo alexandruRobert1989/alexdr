@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {NgClass} from '@angular/common';
+import { Component, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -8,23 +8,31 @@ import {NgClass} from '@angular/common';
     NgClass
   ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewInit {
 
   isDarkTheme: boolean = false;
+
+  @ViewChild('navbarLogo') navbarLogo!: ElementRef;
 
   ngOnInit(): void {
     this.loadTheme();
   }
 
-  toggleTheme() {
+  ngAfterViewInit(): void {
+    if (this.navbarLogo) {
+      this.navbarLogo.nativeElement.classList.add('bounce-animation');
+    }
+  }
+
+  toggleTheme(): void {
     this.isDarkTheme = !this.isDarkTheme;
     document.documentElement.classList.toggle('dark-theme', this.isDarkTheme);
     localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
   }
 
-  loadTheme() {
+  loadTheme(): void {
     const savedTheme = localStorage.getItem('theme');
     this.isDarkTheme = savedTheme === 'dark';
     document.documentElement.classList.toggle('dark-theme', this.isDarkTheme);

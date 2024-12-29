@@ -46,6 +46,13 @@
   border-radius: 4px;
 }
 
+.navbar-logo {
+  height: 40px; /* Adjust to your preferred height */
+  width: auto; /* Maintain the aspect ratio */
+  max-width: 100%; /* Make it responsive */
+  display: block; /* Ensures no inline spacing issues */
+}
+
 
 
 

@@ -17,3 +17,38 @@ app-root {
 router-outlet {
   flex: 1;
 }
+
+.navbar {
+  width: 100%; /* Ensures full-width navbar */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes unwanted padding */
+  position: relative; /* Ensure it respects the parent container */
+  z-index: 1030; /* Prevent it from overlapping content */
+}
+
+.navbar-logo {
+  height: 40px; /* Adjusted for better appearance */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Make it responsive */
+  display: block; /* Prevent inline spacing issues */
+}
+
+// navbar bounce animation
+.bounce-animation {
+  animation: bounce 3s ease-in-out; /* Adjust duration and easing as needed */
+}
+
+// navbar bounce animation
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* Adjust bounce height */
+  }
+  60% {
+    transform: translateY(-5px);  /* Adjust bounce height */
+  }
+}
+
+
