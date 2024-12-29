@@ -19,4 +19,8 @@ export class AppComponent  {
     path: 'assets/lotties/Animation - AI_blueish.json',
   };
 
+  lottieOptionsCropped = {
+    path: 'assets/lotties/CroppedAIBlueish.json',
+  };
+
 }
