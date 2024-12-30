@@ -1,0 +1,13 @@
+
+.rubber-band-animation {
+  animation: rubberBand 1.5s ease-in-out infinite;
+}
+
+@keyframes rubberBand {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25, 0.75);
+  }
+}

@@ -2,9 +2,29 @@
   <app-navbar></app-navbar>
   <!-- Google Translate widget placeholder -->
   <div class="content">
+
+
+    <div class="animation-showcase">
+      <h3>Animation Showcase</h3>
+
+      <img [appAnimation]="AnimationType.Bounce" src="assets/images/alexdr.png" alt="Bounce Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Fade" src="assets/images/alexdr.png" alt="Fade Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Slide" src="assets/images/alexdr.png" alt="Slide Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Spin" src="assets/images/alexdr.png" alt="Spin Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Shake" src="assets/images/alexdr.png" alt="Shake Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Pulse" src="assets/images/alexdr.png" alt="Pulse Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Flip" src="assets/images/alexdr.png" alt="Flip Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.ZoomIn" src="assets/images/alexdr.png" alt="Zoom In Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.ZoomOut" src="assets/images/alexdr.png" alt="Zoom Out Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Swing" src="assets/images/alexdr.png" alt="Swing Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.RubberBand" src="assets/images/alexdr.png" alt="Rubber Band Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.Wobble" src="assets/images/alexdr.png" alt="Wobble Animation" class="animation-image">
+      <img [appAnimation]="AnimationType.LightSpeed" src="assets/images/alexdr.png" alt="Light Speed Animation" class="animation-image">
+    </div>
+
     <!-- Lottie Animation -->
 
-    <custom-lottie [options]="lottieOptionsCropped"></custom-lottie>
+    <custom-lottie [options]="lottieOptions"></custom-lottie>
     <div class="lottie-text-wrapper">
       <custom-lottie [options]="lottieOptionsCropped"></custom-lottie>
       <div class="text-content">

@@ -1,29 +1,26 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import {AnimationDirective} from '../../../directives/animation.directive';
+import {AnimationType} from '../../../enums/animation-type-enum';
 
 @Component({
     selector: 'app-navbar',
-    imports: [
-        NgClass
-    ],
+  imports: [
+    NgClass,
+    AnimationDirective
+  ],
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, AfterViewInit {
+export class NavbarComponent implements OnInit {
 
   isDarkTheme: boolean = false;
 
-  @ViewChild('navbarLogo') navbarLogo!: ElementRef;
 
   ngOnInit(): void {
     this.loadTheme();
   }
 
-  ngAfterViewInit(): void {
-    if (this.navbarLogo) {
-      this.navbarLogo.nativeElement.classList.add('bounce-animation');
-    }
-  }
 
   toggleTheme(): void {
     this.isDarkTheme = !this.isDarkTheme;
@@ -36,4 +33,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.isDarkTheme = savedTheme === 'dark';
     document.documentElement.classList.toggle('dark-theme', this.isDarkTheme);
   }
+
+  protected readonly AnimationType = AnimationType;
 }

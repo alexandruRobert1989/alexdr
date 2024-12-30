@@ -1,4 +1,5 @@
-@import 'themes.scss';
+@use 'themes.scss';
+@use 'assets/styles/animations/index';
 
 /* Layout settings */
 html, body {
@@ -33,22 +34,6 @@ router-outlet {
   display: block; /* Prevent inline spacing issues */
 }
 
-// navbar bounce animation
-.bounce-animation {
-  animation: bounce 3s ease-in-out; /* Adjust duration and easing as needed */
-}
 
-// navbar bounce animation
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px); /* Adjust bounce height */
-  }
-  60% {
-    transform: translateY(-5px);  /* Adjust bounce height */
-  }
-}
 
 
