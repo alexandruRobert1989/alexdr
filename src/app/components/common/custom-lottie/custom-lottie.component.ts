@@ -25,7 +25,6 @@ export class CustomLottieComponent implements OnDestroy {
   @Input() direction: number = 1; // forward
   @Input() loop: boolean = true;
   @Input() customStyles?: { [key: string]: string }; // Optional: Inline styles for the container
-  @Input() customClasses?: string; // Optional: CSS classes for the container
 
   private animationInstance: any;
 

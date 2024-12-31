@@ -1,10 +1,5 @@
-<div
-  class="lottie-container"
+<ng-lottie
+  [options]="options"
   [ngStyle]="customStyles"
-  [class]="customClasses"
->
-  <ng-lottie
-    [options]="options"
-    (animationCreated)="onAnimationCreated($event)"
-  ></ng-lottie>
-</div>
+  (animationCreated)="onAnimationCreated($event)"
+></ng-lottie>

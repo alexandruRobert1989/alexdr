@@ -1,0 +1,12 @@
+img {
+  display: block;
+  margin: 0 auto;
+
+  /* Default responsiveness */
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+}

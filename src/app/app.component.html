@@ -22,9 +22,39 @@
       <img [appAnimation]="AnimationType.LightSpeed" src="assets/images/alexdr.png" alt="Light Speed Animation" class="animation-image">
     </div>
 
-    <!-- Lottie Animation -->
 
-    <custom-lottie [options]="lottieOptions"></custom-lottie>
+    <h1>Gif</h1>
+    <img src="assets/gif/ai-blue-brain.gif" alt="Sample GIF Animation">
+
+    <custom-gif
+      src="assets/gif/ai-blue-brain.gif"
+      alt="Sample Animation"
+      [customStyles]="{ 'border': '1px solid black' }">
+    </custom-gif>
+
+
+
+
+    <!-- Lottie Animation -->
+    <custom-lottie [customStyles]="{ 'max-width': '300px', 'max-height': '300px', border: '1px solid black' }"
+                   [options]="lottieRocket"></custom-lottie>
+
+    <h1>290239</h1>
+    <custom-lottie [customStyles]="{ width: '300px', height: '300px', border: '1px solid black' }"
+                   [options]="lottieOptions"></custom-lottie>
+
+    <h1>Normal</h1>
+    <custom-lottie [customStyles]="{ width: '300px', height: '300px', border: '1px solid black' }"
+                   [options]="lottieOptionsDefault"></custom-lottie>
+
+    <h1>Cropped</h1>
+
+    <custom-lottie [customStyles]="{  border: '1px solid black' }"
+                   [options]="lottieOptionsCropped"></custom-lottie>
+
+
+
+
     <div class="lottie-text-wrapper">
       <custom-lottie [options]="lottieOptionsCropped"></custom-lottie>
       <div class="text-content">

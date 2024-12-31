@@ -1,12 +1,12 @@
-.lottie-container {
+:host ::ng-deep ng-lottie {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Default aspect ratio to maintain proper scaling */
+  /* Default aspect ratio */
   aspect-ratio: 1;
 
-  /* Ensure responsiveness */
+  /* Responsiveness */
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
