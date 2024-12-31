@@ -6,12 +6,13 @@ import {AnimationType} from './enums/animation-type-enum';
 import {AnimationDirective} from './directives/animation.directive';
 import {CustomLottieComponent} from './components/common/custom-lottie/custom-lottie.component';
 import {CustomGifComponent} from './components/common/custom-gif/custom-gif.component';
+import {CustomVideoComponent} from './components/common/custom-video/custom-video.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, AnimationDirective, CustomLottieComponent, CustomGifComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, AnimationDirective, CustomLottieComponent, CustomGifComponent, CustomVideoComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

@@ -24,14 +24,24 @@
 
 
     <h1>Gif</h1>
-    <img src="assets/gif/ai-blue-brain.gif" alt="Sample GIF Animation">
-
     <custom-gif
-      src="assets/gif/ai-blue-brain.gif"
+      src="assets/gifs/ai-blue-brain.gif"
       alt="Sample Animation"
-      [customStyles]="{ 'border': '1px solid black' }">
+      [customStyles]="{ 'border': '2px solid blue', 'max-width': '300px' }">
     </custom-gif>
 
+
+    <h1>Video</h1>
+
+    <custom-video
+      [src]="'assets/videos/ai-blue-brain.mov'"
+      [controls]="true"
+      [autoplay]="true"
+      [loop]="true"
+      [muted]="true"
+      [allowDownload]="false"
+      [customStyles]="{ 'border': '2px solid blue', 'max-width': '400px' }">
+    </custom-video>
 
 
 
