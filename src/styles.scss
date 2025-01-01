@@ -1,10 +1,11 @@
+/* Global styles */
 @use 'themes.scss';
 @use 'assets/styles/animations/index';
 
 /* Layout settings */
 html, body {
-  height: 100%;
-  margin: 0;
+  height: 100%; /* Ensure the root container spans the viewport */
+  margin: 0; /* Remove default margin */
   display: flex;
   flex-direction: column;
 }
@@ -12,28 +13,27 @@ html, body {
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* App container spans the entire viewport height */
 }
 
+/* Ensure router-outlet grows to fill available space */
 router-outlet {
-  flex: 1;
+  flex: 1; /* Allows dynamic content to grow or shrink */
 }
 
 .navbar {
-  width: 100%; /* Ensures full-width navbar */
-  margin: 0; /* Removes any default margin */
-  padding: 0; /* Removes unwanted padding */
-  position: relative; /* Ensure it respects the parent container */
-  z-index: 1030; /* Prevent it from overlapping content */
+  width: 100%; /* Full-width navbar */
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1030; /* Ensure it's above other content */
 }
 
-.navbar-logo {
-  height: 40px; /* Adjusted for better appearance */
-  width: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Make it responsive */
-  display: block; /* Prevent inline spacing issues */
+/* Global footer styles */
+footer {
+  text-align: center; /* Center footer text */
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 10px 0;
+  width: 100%; /* Ensure footer spans the full width */
+  margin-top: auto; /* Push footer to the bottom */
 }
-
-
-
-

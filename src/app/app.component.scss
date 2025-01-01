@@ -1,69 +1,40 @@
-/* app-background ensures the full height of the viewport is used */
+/* Ensure the app-background spans the viewport */
 .app-background {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the wrapper takes full viewport height */
+  min-height: 100vh; /* Full viewport height */
 }
 
-/* Ensure content does not stretch unnecessarily */
-.content {
-  display: flex; /* Flexbox for centering */
-  flex-direction: column; /* Stack rows vertically */
-  justify-content: flex-start; /* Align rows to the top */
-  align-items: center; /* Center rows horizontally */
-  padding: 20px; /* Add padding around the content */
-  gap: 20px; /* Add consistent spacing between rows */
-  flex-grow: 0; /* Prevent content from stretching to fill available space */
-}
-
-/* Row for Lottie and text */
-.lottie-text-wrapper {
+/* Content wrapper ensures content and footer positioning */
+.content-wrapper {
+  flex: 1; /* Push the footer down when content is insufficient */
   display: flex;
-  align-items: center; /* Align items vertically */
-  gap: 20px; /* Space between Lottie and text */
-  margin: 0 auto; /* Center the row within the parent */
-  width: 100%; /* Use full width */
-  max-width: 1200px; /* Limit row width for larger screens */
+  flex-direction: column;
 }
 
-/* Lottie animation styling */
-.lottie-text-wrapper custom-lottie {
-  flex: 0 0 33%; /* Take up one-third of the row width */
-  height: auto; /* Maintain aspect ratio */
+/* Main content area */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Content aligns at the top */
+  align-items: center;
+  padding: 20px; /* Add padding around content */
+  width: 100%; /* Full width */
 }
 
-/* Text content styling */
-.text-content {
-  flex-grow: 1; /* Allow text to take remaining space */
-  max-width: 600px; /* Limit the text width for better readability */
-}
-
-.text-content h2 {
-  font-size: 1.5rem; /* Adjust heading size */
-  margin-bottom: 10px;
-}
-
-.text-content p {
-  font-size: 1rem; /* Adjust paragraph size */
-  line-height: 1.6; /* Increase line spacing for better readability */
+/* Footer styles */
+footer {
+  text-align: center; /* Center footer text */
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .lottie-text-wrapper {
-    flex-direction: column; /* Stack Lottie and text vertically */
-    text-align: center; /* Center-align the text */
-    margin: 0; /* Remove unnecessary space */
-  }
-
-  .lottie-text-wrapper custom-lottie {
-    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
-    width: 100%; /* Full width for small screens */
-    max-width: 300px; /* Limit the width */
-    margin-bottom: 20px; /* Space below the Lottie animation */
-  }
-
-  .text-content {
-    max-width: 100%; /* Allow text to span full width */
+  .content {
+    align-items: flex-start; /* Adjust alignment for smaller screens */
+    padding: 10px;
   }
 }
