@@ -1,0 +1,82 @@
+<div class="animation-doc-container">
+  <h1>Animation Directive Documentation</h1>
+  <p>
+    The <strong>AnimationDirective</strong> allows you to apply various animations to elements.
+    Below is a showcase of all available animations, followed by documentation on its usage.
+  </p>
+
+  <h2>Animation Showcase</h2>
+  <div class="animation-grid">
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Bounce" src="assets/images/alexdr.png" alt="Bounce Animation">
+      <p>Bounce</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Fade" src="assets/images/alexdr.png" alt="Fade Animation">
+      <p>Fade</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Slide" src="assets/images/alexdr.png" alt="Slide Animation">
+      <p>Slide</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Spin" src="assets/images/alexdr.png" alt="Spin Animation">
+      <p>Spin</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Shake" src="assets/images/alexdr.png" alt="Shake Animation">
+      <p>Shake</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Pulse" src="assets/images/alexdr.png" alt="Pulse Animation">
+      <p>Pulse</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Flip" src="assets/images/alexdr.png" alt="Flip Animation">
+      <p>Flip</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.ZoomIn" src="assets/images/alexdr.png" alt="Zoom In Animation">
+      <p>Zoom In</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.ZoomOut" src="assets/images/alexdr.png" alt="Zoom Out Animation">
+      <p>Zoom Out</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Swing" src="assets/images/alexdr.png" alt="Swing Animation">
+      <p>Swing</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.RubberBand" src="assets/images/alexdr.png" alt="Rubber Band Animation">
+      <p>Rubber Band</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.Wobble" src="assets/images/alexdr.png" alt="Wobble Animation">
+      <p>Wobble</p>
+    </div>
+    <div class="animation-item">
+      <img [appAnimation]="AnimationType.LightSpeed" src="assets/images/alexdr.png" alt="Light Speed Animation">
+      <p>Light Speed</p>
+    </div>
+  </div>
+
+  <h2>Directive Documentation</h2>
+  <p>
+    The <strong>AnimationDirective</strong> applies animation classes to elements. Below is the list of accepted inputs:
+  </p>
+  <ul>
+    <li>
+      <strong>[appAnimation]</strong> (required): The animation type, based on the <code>AnimationType</code> enum.
+      <br />Example: <code>AnimationType.Bounce</code>
+    </li>
+  </ul>
+
+  <h3>Example Usage</h3>
+  <pre>
+    &lt;img
+      [appAnimation]="AnimationType.Bounce"
+      src="assets/images/alexdr.png"
+      alt="Bounce Animation"&gt;
+  </pre>
+</div>

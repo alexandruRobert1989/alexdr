@@ -1,0 +1,86 @@
+<div class="video-doc-container">
+  <h1>CustomVideo Component Documentation</h1>
+  <p>
+    The <strong>CustomVideo</strong> component allows you to embed videos with customizable
+    playback options and styles. Below are examples demonstrating its usage and the inputs it
+    accepts.
+  </p>
+
+  <h2>Accepted Inputs</h2>
+  <ul>
+    <li>
+      <strong>src</strong> (required): The source path to the video file.
+      <br />Example: <code>assets/videos/ai-blue-brain.mov</code>
+    </li>
+    <li>
+      <strong>poster</strong> (optional): A poster image displayed before the video starts playing.
+      <br />Example: <code>assets/images/video-poster.jpg</code>
+    </li>
+    <li>
+      <strong>controls</strong> (optional): Whether to show playback controls.
+      <br />Default: <code>true</code>
+    </li>
+    <li>
+      <strong>autoplay</strong> (optional): Whether the video should start playing automatically.
+      <br />Default: <code>false</code>
+    </li>
+    <li>
+      <strong>loop</strong> (optional): Whether the video should loop after finishing.
+      <br />Default: <code>false</code>
+    </li>
+    <li>
+      <strong>muted</strong> (optional): Whether the video should start muted.
+      <br />Default: <code>false</code>
+    </li>
+    <li>
+      <strong>allowDownload</strong> (optional): Allow the "Download" option in controls.
+      <br />Default: <code>true</code>
+    </li>
+    <li>
+      <strong>customStyles</strong> (optional): Key-value pair object for custom styles.
+      <br />Example:
+      <code>
+        {{ '{' }} border: '2px solid blue', maxWidth: '400px' {{ '}' }}
+      </code>
+    </li>
+  </ul>
+
+  <h2>Examples</h2>
+
+  <h3>1. Default Usage</h3>
+  <p>Using only the <code>src</code> input:</p>
+  <custom-video
+    [src]="'assets/videos/ai-blue-brain.mov'"
+    [controls]="true"
+  ></custom-video>
+
+  <h3>2. With Custom Styles</h3>
+  <p>Applying custom styles and playback settings:</p>
+  <custom-video
+    [src]="'assets/videos/ai-blue-brain.mov'"
+    [controls]="true"
+    [autoplay]="true"
+    [loop]="true"
+    [muted]="true"
+    [allowDownload]="false"
+    [customStyles]="{ 'border': '2px solid blue', 'max-width': '400px' }"
+  ></custom-video>
+  <p>
+    <strong>Custom Styles and Settings Used:</strong>
+  <ul>
+    <li><code>border: '2px solid blue'</code>: Adds a 2-pixel solid blue border around the video.</li>
+    <li><code>max-width: '400px'</code>: Restricts the maximum width of the video to 400 pixels, ensuring it scales proportionally.</li>
+    <li><code>autoplay: true</code>: Automatically starts playing the video when the component is loaded, creating a dynamic and engaging experience.</li>
+    <li><code>loop: true</code>: Ensures the video automatically restarts from the beginning once it reaches the end, providing continuous playback.</li>
+    <li><code>muted: true</code>: Starts the video with no sound, making it ideal for scenarios where autoplay is enabled to avoid abrupt noise.</li>
+    <li><code>allowDownload: false</code>: Disables the "Download" option in the video controls, restricting users from downloading the video directly from the player.</li>
+  </ul>
+  <strong>Effect:</strong>
+  <ul>
+    <li>The video is visually highlighted with a blue border, and its size is constrained to fit within 400px width for better layout control.</li>
+    <li>The video starts playing automatically upon component load.</li>
+    <li>The video loops continuously without requiring manual restart.</li>
+    <li>The video starts muted, preventing any initial sound playback.</li>
+    <li>The "Download" option is removed from the video controls, ensuring content protection.</li>
+  </ul>
+</div>

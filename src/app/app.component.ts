@@ -3,29 +3,21 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import {AnimationType} from './enums/animation-type-enum';
-import {AnimationDirective} from './directives/animation.directive';
 import {CustomLottieComponent} from './components/common/custom-lottie/custom-lottie.component';
-import {CustomGifComponent} from './components/common/custom-gif/custom-gif.component';
-import {CustomVideoComponent} from './components/common/custom-video/custom-video.component';
+import {CustomGifDocComponent} from './components/custom-gif-doc/custom-gif-doc.component';
+import {AnimationDocComponent} from './components/animation-doc/animation-doc.component';
+import {CustomVideoDocComponent} from './components/custom-video-doc/custom-video-doc.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, AnimationDirective, CustomLottieComponent, CustomGifComponent, CustomVideoComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CustomLottieComponent, CustomGifDocComponent, AnimationDocComponent, CustomVideoDocComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent  {
   title = 'alexdr-ai';
-
-  lottieOptions = {
-    path: 'assets/lotties/290239.json',
-  };
-
-  lottieOptionsDefault = {
-    path: 'assets/lotties/Animation - AI_blueish.json',
-  };
 
 
   lottieRocket = {

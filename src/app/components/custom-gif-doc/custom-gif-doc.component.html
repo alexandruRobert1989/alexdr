@@ -1,0 +1,78 @@
+<div class="doc-container">
+  <h1>CustomGif Component Documentation</h1>
+  <p>
+    The <strong>CustomGif</strong> component allows you to display GIFs with customizable styles.
+    Below are examples demonstrating its usage and the inputs it accepts.
+  </p>
+
+  <h2>Accepted Inputs</h2>
+  <ul>
+    <li>
+      <strong>src</strong> (required): The source URL of the GIF.
+      <br />Example: <code>assets/gifs/ai-blue-brain.gif</code>
+    </li>
+    <li>
+      <strong>alt</strong> (optional): Alternative text for the GIF.
+      <br />Default: <code>'GIF Image'</code>
+    </li>
+    <li>
+      <strong>customStyles</strong> (optional): A key-value pair object for custom styles.
+      <br />Example:
+      <code>
+        {{ "{" }} border: '2px solid #4caf50', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', margin: '20px auto', maxWidth: '300px' {{ '}' }}
+      </code>
+      <br />
+      <strong>Explanation:</strong>
+      <ul>
+        <li>
+          <code>border: '2px solid #4caf50'</code>: Adds a green border with a thickness of 2 pixels, making the GIF visually stand out.
+        </li>
+        <li>
+          <code>borderRadius: '10px'</code>: Rounds the corners of the GIF, giving it a softer, modern appearance.
+        </li>
+        <li>
+          <code>boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'</code>: Applies a subtle shadow effect to the GIF, creating a sense of depth and elevating it above the background.
+        </li>
+        <li>
+          <code>margin: '20px auto'</code>: Centers the GIF horizontally and adds a 20-pixel space around it for better spacing in layouts.
+        </li>
+        <li>
+          <code>maxWidth: '300px'</code>: Limits the maximum width of the GIF to 300 pixels, ensuring it fits within smaller layouts while maintaining responsiveness.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Examples</h2>
+
+  <h3>1. Default Usage</h3>
+  <p>Using only the <code>src</code> input:</p>
+  <custom-gif src="assets/gifs/ai-blue-brain.gif" alt="AI Blue Brain"></custom-gif>
+
+  <h3>2. With Custom Styles</h3>
+  <p>Applying custom styles using the <code>customStyles</code> input:</p>
+  <custom-gif
+    src="assets/gifs/ai-blue-brain.gif"
+    alt="Styled AI Blue Brain"
+    [customStyles]="{
+      border: '2px solid #4caf50',
+      borderRadius: '10px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+      margin: '20px auto',
+      maxWidth: '300px'
+    }"
+  ></custom-gif>
+  <p>
+    <strong>Custom Styles Applied:</strong>
+  <ul>
+    <li><code>border: '2px solid #4caf50'</code>: Adds a green border with a thickness of 2 pixels, making the GIF visually stand out.</li>
+    <li><code>borderRadius: '10px'</code>: Rounds the corners of the GIF, giving it a softer, modern appearance.</li>
+    <li><code>boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'</code>: Applies a subtle shadow effect to the GIF, creating a sense of depth and elevating it above the background.</li>
+    <li><code>margin: '20px auto'</code>: Centers the GIF horizontally and adds a 20-pixel space around it for better spacing in layouts.</li>
+    <li><code>maxWidth: '300px'</code>: Limits the maximum width of the GIF to 300 pixels, ensuring it fits within smaller layouts while maintaining responsiveness.</li>
+  </ul>
+  <p>
+    <strong>Effect:</strong>
+    The GIF is styled to stand out visually while maintaining responsiveness and alignment in various layouts.
+  </p>
+</div>
