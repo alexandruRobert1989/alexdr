@@ -7,31 +7,10 @@
     <app-animation-doc></app-animation-doc>
     <custom-gif-doc></custom-gif-doc>
     <app-custom-video-doc></app-custom-video-doc>
-
-    <!-- Lottie Animation -->
-    <h1>Lottie</h1>
-
-    <custom-lottie [customStyles]="{ 'max-width': '300px', 'max-height': '300px', border: '1px solid black' }"
-                   [options]="lottieRocket"></custom-lottie>
-
-    <div class="lottie-text-wrapper">
-      <custom-lottie [options]="lottieOptionsCropped"></custom-lottie>
-      <div class="text-content">
-        <h2>Welcome to AlexDR-AI</h2>
-        <p>
-          This is a personal AI-powered platform designed to showcase the best in
-          technology, creativity, and innovation. Explore projects, ideas, and more!
-        </p>
-      </div>
-    </div>
+    <app-custom-lottie-doc></app-custom-lottie-doc>
 
     <router-outlet></router-outlet>
-    <div class="test-links">
-      <p>Check out these links to test standalone link styling:</p>
-      <a href="#">Standalone Link 1</a><br>
-      <a href="#">Standalone Link 2</a><br>
-      <a href="#">Standalone Link 3</a>
-    </div>
+
   </div>
   <app-footer></app-footer>
 </div>

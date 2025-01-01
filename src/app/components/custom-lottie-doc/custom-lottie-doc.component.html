@@ -1,0 +1,73 @@
+<div class="doc-container">
+  <h1>CustomLottie Component Documentation</h1>
+  <p>
+    The <strong>CustomLottie</strong> component allows you to integrate Lottie animations with customizable options and styles. Below are examples demonstrating its usage and the inputs it accepts.
+  </p>
+
+  <h2>Accepted Inputs</h2>
+  <ul>
+    <li>
+      <strong>options</strong> (required): The configuration options for the Lottie animation.
+      <br />Example:
+      <code>
+        {{ "{" }} path: 'assets/animations/rocket.json', renderer: 'svg', autoplay: true, loop: true {{ "}" }}
+      </code>
+    </li>
+    <li>
+      <strong>speed</strong> (optional): The playback speed of the animation.
+      <br />Default: <code>0.5</code>
+    </li>
+    <li>
+      <strong>direction</strong> (optional): The playback direction of the animation.
+      <br />Default: <code>1</code> (forward); use <code>-1</code> for reverse.
+    </li>
+    <li>
+      <strong>loop</strong> (optional): Whether the animation should loop.
+      <br />Default: <code>true</code>
+    </li>
+    <li>
+      <strong>customStyles</strong> (optional): A key-value pair object for custom styles applied to the animation container.
+      <br />Example:
+      <code>
+        {{ "{" }} maxWidth: '300px', maxHeight: '300px', border: '1px solid black' {{ "}" }}
+      </code>
+      <br />
+      <strong>Explanation:</strong>
+      <ul>
+        <li>
+          <code>maxWidth: '300px'</code>: Limits the maximum width of the animation container to 300 pixels.
+        </li>
+        <li>
+          <code>maxHeight: '300px'</code>: Limits the maximum height of the animation container to 300 pixels.
+        </li>
+        <li>
+          <code>border: '1px solid black'</code>: Adds a black border with a thickness of 1 pixel around the animation.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Examples</h2>
+
+  <h3>1. Default Usage</h3>
+  <p>Using only the <code>options</code> input:</p>
+  <custom-lottie [options]="lottieRocket"></custom-lottie>
+
+  <h3>2. With Custom Styles</h3>
+  <p>Applying custom styles using the <code>customStyles</code> input:</p>
+  <custom-lottie
+    [customStyles]="{ 'max-width': '300px', 'max-height': '300px', border: '1px solid black' }"
+    [options]="lottieRocket"
+  ></custom-lottie>
+  <p>
+    <strong>Custom Styles Applied:</strong>
+  <ul>
+    <li><code>maxWidth: '300px'</code>: Restricts the animation container's maximum width to 300 pixels.</li>
+    <li><code>maxHeight: '300px'</code>: Restricts the animation container's maximum height to 300 pixels.</li>
+    <li><code>border: '1px solid black'</code>: Adds a 1-pixel solid black border around the container.</li>
+  </ul>
+  <p>
+    <strong>Effect:</strong>
+    The Lottie animation is styled to fit within a 300x300 pixel container, centered and visually framed by a black border for better emphasis.
+  </p>
+</div>
