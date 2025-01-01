@@ -1,14 +1,92 @@
 .home-page {
-  text-align: center;
-  margin-top: 50px;
-}
+  .hero-section {
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, #0066ff, #003399); /* Gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Ensure text is visible */
+    text-align: center;
+    padding: 0 10%; /* Add horizontal padding for better layout */
+  }
 
-.home-page h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+  .animation-wrapper {
+    margin-bottom: 30px;
+    max-width: 600px; /* Limit animation width for better centering */
+    width: 100%; /* Make it responsive */
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect */
+  }
 
-.home-page p {
-  font-size: 1.2rem;
-  color: #555;
+  h1 {
+    font-size: 4rem; /* Increase heading size */
+    margin-bottom: 20px;
+    max-width: 900px; /* Limit heading width */
+    line-height: 1.2; /* Adjust line height for readability */
+    animation: slideInDown 1s ease-in-out; /* Slide-in effect */
+  }
+
+  p {
+    font-size: 1.5rem; /* Increase paragraph size */
+    margin-bottom: 40px;
+    max-width: 800px; /* Limit paragraph width */
+    animation: slideInUp 1s ease-in-out; /* Slide-in effect */
+  }
+
+  a.btn {
+    padding: 15px 30px; /* Increase button size */
+    font-size: 1.2rem; /* Larger text for buttons */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 0 5%; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+      font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+      font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    a.btn {
+      font-size: 1rem; /* Smaller button text */
+      padding: 10px 20px; /* Adjust button size */
+    }
+  }
 }
