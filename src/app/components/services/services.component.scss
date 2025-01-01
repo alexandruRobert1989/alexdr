@@ -1,0 +1,38 @@
+.services-page {
+  .hero-section {
+    background: #e3f2fd; /* Light blue background */
+    color: #212121; /* Neutral text color for readability */
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .services-section {
+    background: #ffffff; /* White background */
+    padding: 50px 0;
+
+    .service-card {
+      background: #f8f9fa; /* Light gray background for card */
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      i {
+        color: #007bff; /* Primary icon color */
+      }
+
+      h5 {
+        color: #212121; /* Neutral heading color */
+        margin-top: 10px;
+      }
+
+      p {
+        color: #6c757d; /* Muted paragraph color */
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow effect */
+      }
+    }
+  }
+}
