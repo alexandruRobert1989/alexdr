@@ -1,0 +1,48 @@
+.contact-page {
+  .hero-section {
+    background: #e3f2fd; /* Light blue background */
+    color: #212121; /* Dark text color for readability */
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .contact-form-section {
+    padding: 50px 0;
+
+    form {
+      .form-label {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .contact-info-section {
+    padding: 40px 0;
+
+    i {
+      color: #007bff;
+    }
+
+    h5 {
+      margin-top: 10px;
+      color: #212121;
+    }
+
+    p {
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+  }
+}
